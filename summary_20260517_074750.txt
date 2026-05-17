@@ -1,0 +1,37 @@
+### **Prompt Engineering Overview**
+*   **Definition:** Prompt engineering is an iterative process of designing high-quality inputs to guide Large Language Models (LLMs) to produce accurate, meaningful, and relevant outputs.
+*   **Mechanism:** LLMs are prediction engines that generate the next token based on training data and the provided prompt.
+
+### **LLM Output Configuration**
+*   **Output Length:** Controls the number of tokens generated; shorter lengths save costs and energy but require careful prompt design to ensure completeness.
+*   **Sampling Controls:**
+    *   **Temperature:** Adjusts randomness. Low (0) is deterministic; high increases creativity and diversity.
+    *   **Top-K:** Limits token selection to the top K most likely candidates.
+    *   **Top-P (Nucleus Sampling):** Limits selection to a subset of tokens whose cumulative probability meets a threshold (P).
+*   **Interaction:** These settings impact one another; extreme values for one can render others irrelevant.
+
+### **Prompting Techniques**
+*   **Zero-Shot:** Providing a task description without examples.
+*   **One-Shot & Few-Shot:** Providing one or multiple examples to help the model understand the desired pattern or output structure.
+*   **System, Role, & Contextual Prompting:**
+    *   **System:** Defines the model’s fundamental purpose and output requirements (e.g., JSON format).
+    *   **Role:** Assigns a persona (e.g., "travel guide") to influence tone and expertise.
+    *   **Contextual:** Provides background information specific to the current task.
+*   **Step-Back Prompting:** Asking the model to consider general principles before solving a specific problem to improve reasoning.
+*   **Chain of Thought (CoT):** Encouraging the model to generate intermediate reasoning steps, which significantly improves performance on complex or mathematical tasks.
+*   **Self-Consistency:** Running the same prompt multiple times and using majority voting to select the most consistent answer.
+*   **Tree of Thoughts (ToT):** Exploring multiple reasoning paths simultaneously to solve complex problems.
+*   **ReAct (Reason & Act):** Combining reasoning with external tool usage (e.g., search engines) to solve tasks.
+*   **Automatic Prompt Engineering (APE):** Using an LLM to generate, evaluate, and refine prompts to find the most effective version.
+
+### **Code Prompting**
+*   LLMs can assist in writing, explaining, translating, debugging, and reviewing code.
+*   **Best Practice:** Always test generated code, as LLMs can hallucinate or produce syntax errors. Use Markdown formatting to preserve indentation.
+
+### **Best Practices**
+*   **Simplicity:** Keep prompts concise and clear; avoid unnecessary information.
+*   **Specificity:** Be explicit about the desired output format and content.
+*   **Instructions over Constraints:** Focus on what the model *should* do rather than what it *should not* do.
+*   **Variables:** Use placeholders in prompts to make them dynamic and reusable.
+*   **Documentation:** Maintain a structured log (e.g., a spreadsheet) of prompt attempts, configurations, and results to track performance and debug issues.
+*   **Iteration:** Treat prompt engineering as an ongoing experiment; adapt to model updates and refine based on performance metrics.

@@ -1,0 +1,46 @@
+Here are the 5 MCQ's on topic:prompt lengths
+
+Q1: Why is it important to carefully design prompts when configuring LLMs for shorter output lengths?
+Options:
+a. Shorter outputs always increase the model's creativity.
+b. Shorter outputs require careful design to ensure the response remains complete.
+c. Shorter outputs automatically eliminate the need for temperature settings.
+d. Shorter outputs prevent the model from using external tools.
+
+Correct Answer: b
+
+Q2: What is the primary benefit of configuring LLMs to generate shorter output lengths?
+Options:
+a. It improves the model's reasoning capabilities.
+b. It forces the model to use Chain of Thought prompting.
+c. It saves costs and energy.
+d. It makes the model's output more deterministic.
+
+Correct Answer: c
+
+Q3: How does the "Output Length" configuration interact with other sampling controls like Temperature or Top-P?
+Options:
+a. They are independent and do not affect one another.
+b. Output length is only relevant when Temperature is set to 0.
+c. Extreme values in one setting can render others irrelevant.
+d. Output length must always be set higher than the Top-K value.
+
+Correct Answer: c
+
+Q4: Which of the following is a best practice mentioned for managing prompt configurations and results?
+Options:
+a. Relying solely on memory to track prompt performance.
+b. Maintaining a structured log, such as a spreadsheet, of attempts and results.
+c. Avoiding documentation to keep the prompt engineering process agile.
+d. Only logging prompts that resulted in errors.
+
+Correct Answer: b
+
+Q5: In the context of LLM output, what does a "Low" temperature setting (0) achieve?
+Options:
+a. It increases the diversity of the generated tokens.
+b. It makes the output deterministic.
+c. It automatically shortens the output length.
+d. It enables the model to use external search engines.
+
+Correct Answer: b
